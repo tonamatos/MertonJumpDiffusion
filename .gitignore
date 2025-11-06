@@ -181,4 +181,4 @@ cython_debug/
 .cursorindexingignore
 
 # Instructor's notebooks
-_lecture_notes
+_lecture_notes/
