@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Merton Jump Diffusion</title>
+  <title>Tona Quant</title>
   <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css" />
-  <link rel="icon" href="https://notes.wiederhold.dev/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-512/free-stocks-icon-svg-download-png-2365239.png" type="image/x-icon" />
   <style>
     /* Subtle fade-in animation for footer */
     @keyframes fadeIn {
@@ -17,7 +17,7 @@
       animation: fadeIn 2s ease-in;
       text-align: center;
       font-size: 0.9rem;
-      color: #666;
+      color: #000000;
       margin-top: 2rem;
       padding: 1rem 0;
       border-top: 1px solid #ddd;
@@ -7480,12 +7480,68 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
-<header>
-  <h1>Merton Jump-Diffusion Model</h1>
-  <p>Quant Research Notebook by <a href="https://wiederhold.dev">Tonatiuh Matos Wiederhold</a></p>
-  <p><small>Explore model calibration and simulation of jump processes in asset pricing.</small></p>
-  <hr>
+<header style="
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+">
+
+  <!-- Left: Title and description -->
+  <div style="flex: 1; min-width: 260px;">
+    <h1 style="margin-bottom: 0.3rem;">
+      Derivative Trading Strategies in Sudden Market Movements
+    </h1>
+    <p style="margin: 0.3rem 0; text-align: center;">
+      <strong>Quant Research Notebook</strong> by 
+      <a href="https://wiederhold.dev" target="_blank" style="text-decoration:none;">
+        Tonatiuh Matos Wiederhold, Ph.D. Candidate
+      </a>
+    </p>
+    <p style="font-size: 0.95rem; color: #555; margin-top: 0.2rem; text-align: center;">
+      Exploring model calibration and stochastic jump processes in derivative pricing.
+    </p>
+  </div>
+
+  <!-- Right: GIF placeholder -->
+  <div style="flex-shrink: 0;">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTJnNHk5ZG94eTV0MDA0dWRiYzZvZXViNDlpZjJlaXhpbms1NDE3aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iYTXFJofI7I987H92k/giphy.gif" 
+         alt="Model animation" 
+         style="width: 150px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+  </div>
 </header>
+
+<!-- GitHub link (centered below header) -->
+<p style="text-align:center; margin-top:-1rem; margin-bottom:2rem;">
+  <a href="https://github.com/tonamatos/MertonJumpDiffusion" target="_blank"
+     style="text-decoration:none; color:#0366d6; font-weight:600;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" 
+         viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:4px;">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303
+        3.438 9.8 8.205 11.387.6.113.82-.258.82-.577
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61
+        -4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757
+        -1.09-.745.084-.729.084-.729 1.205.084 1.84
+        1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492
+        .998.108-.776.418-1.305.762-1.605-2.665-.3-5.466
+        -1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22
+        -.135-.303-.54-1.523.105-3.176 0 0 1.005-.322
+        3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006
+        2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23
+        .645 1.653.24 2.873.12 3.176.765.84 1.23 1.91
+        1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81
+        1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0
+        .315.21.69.825.57C20.565 22.092 24 17.592 24
+        12.297c0-6.627-5.373-12-12-12"/>
+    </svg>
+    View Project on GitHub
+  </a>
+</p>
+
+<hr style="margin-top:1rem;">
+
 
 <main>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=03fc5e36">
@@ -7494,7 +7550,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Merton-Jump-Diffusion-Model-for-European-Options">Merton Jump Diffusion Model for European Options<a class="anchor-link" href="#Merton-Jump-Diffusion-Model-for-European-Options">¶</a></h1><p>This notebook extends the course framework to the Merton Jump Diffusion model, building on the GBM and Heston models previously studied.</p>
+<h1 id="Merton-Jump-Diffusion-Model-for-European-Options">Merton Jump Diffusion Model for European Options<a class="anchor-link" href="#Merton-Jump-Diffusion-Model-for-European-Options">¶</a></h1><p>I extend the Black-Scholes framework to the Merton Jump-Diffusion model, building on the Geometric Brownian Motion (GBM) and Heston models.</p>
 </div>
 </div>
 </div>
@@ -7505,7 +7561,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Intuition:-Jump-Diffusion-vs.-GBM">Intuition: Jump Diffusion vs. GBM<a class="anchor-link" href="#Intuition:-Jump-Diffusion-vs.-GBM">¶</a></h3><p>The Merton Jump Diffusion model augments the standard Geometric Brownian Motion (GBM) by allowing for sudden, random jumps in asset prices. While GBM assumes continuous paths, the Merton model captures rare but significant events (jumps) observed in real markets.</p>
+<h3 id="Intuition:-Jump-Diffusion-vs.-GBM">Intuition: Jump Diffusion vs. GBM<a class="anchor-link" href="#Intuition:-Jump-Diffusion-vs.-GBM">¶</a></h3><p>The Merton Jump Diffusion model augments the standard GBM by allowing for sudden, random jumps in asset prices. While GBM assumes continuous paths, the Merton model captures rare but significant events (jumps) observed in real markets.</p>
 <ul>
 <li><strong>GBM:</strong> Only continuous, normally distributed returns.</li>
 <li><strong>Merton Jump Diffusion:</strong> Adds a Poisson-driven jump component with lognormally distributed jump sizes.</li>
@@ -7520,7 +7576,6 @@ where $N_t$ is a Poisson process (jump times), and $J$ are i.i.d. lognormal jump
 <li>$\mu, \sigma$: Drift and volatility of the continuous part (as in GBM)</li>
 </ul>
 <p>Jumps are modeled as $J \sim \exp(\mu_J + \sigma_J Z)$, $Z \sim N(0,1)$.</p>
-<h3 id="Calibration-Approach">Calibration Approach<a class="anchor-link" href="#Calibration-Approach">¶</a></h3><p>I use a simple least-squares fit to historical returns.</p>
 </div>
 </div>
 </div>
@@ -7531,7 +7586,7 @@ where $N_t$ is a Poisson process (jump times), and $J$ are i.i.d. lognormal jump
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Model-Setup-and-Imports">1. Model Setup and Imports<a class="anchor-link" href="#1.-Model-Setup-and-Imports">¶</a></h2><p>I begin by importing the core numerical and plotting libraries (<code>NumPy</code>, <code>pandas</code>, <code>matplotlib</code>), pricing methods from the Erdos Quantitative Finance Boot Camp, and defining key market parameters such as risk-free rate, volatility, and option maturity.</p>
+<h2 id="1.-Model-Setup-and-Imports">1. Model Setup<a class="anchor-link" href="#1.-Model-Setup-and-Imports">¶</a></h2><p>Begin by importing the core numerical and plotting libraries (<code>NumPy</code>, <code>pandas</code>, <code>matplotlib</code>), classical pricing methods, and defining key market parameters such as risk-free rate, volatility, and option maturity.</p>
 <p>This provides the foundation for both the GBM and Merton models.</p>
 <p>The goal is to later compare their hedging and pricing performance on real equity data.</p>
 </div>
@@ -7558,7 +7613,7 @@ where $N_t$ is a Poisson process (jump times), and $J$ are i.i.d. lognormal jump
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
 
-<span class="c1"># Black-Scholes methods seen in lectures:</span>
+<span class="c1"># Black-Scholes methods:</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">course_methods</span><span class="w"> </span><span class="kn">import</span> <span class="n">bs_call</span><span class="p">,</span> <span class="n">bs_put</span><span class="p">,</span> <span class="n">bs_call_delta</span><span class="p">,</span> <span class="n">bs_put_delta</span><span class="p">,</span> <span class="n">GBM_paths</span>
 
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
@@ -7598,7 +7653,7 @@ where $N_t$ is a Poisson process (jump times), and $J$ are i.i.d. lognormal jump
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="2.-Merton-Jump-Diffusion-Simulation">2. Merton Jump Diffusion Simulation<a class="anchor-link" href="#2.-Merton-Jump-Diffusion-Simulation">¶</a></h2><p>The Merton model extends the classic Geometric Brownian Motion (GBM) by adding a jump component.<br/>
+<h2 id="2.-Merton-Jump-Diffusion-Simulation">2. Merton Jump Diffusion Simulation<a class="anchor-link" href="#2.-Merton-Jump-Diffusion-Simulation">¶</a></h2><p>The Merton model extends the classic GBM by adding a jump component.<br/>
 This captures sudden price moves, modeled as a Poisson process with normally distributed jump sizes.</p>
 <p>I simulate both GBM and Merton paths using the same parameters to visualize the impact of jumps.
 While both models share similar drift and volatility, the Merton paths exhibit occasional discontinuities and heavier tails, consistent with real market data.</p>
@@ -7649,7 +7704,7 @@ While both models share similar drift and volatility, the Merton paths exhibit o
 <span class="c1">#plt.plot(t, merton_paths.mean(axis=0),'r', ls='--', alpha=0.5, label='Merton mean')</span>
 <span class="c1">#plt.legend()</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"GBM (blue) vs Merton Jump-Diffusion (red) Paths"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"GBM (blue) vs Merton JumpDiffusion (red) Paths"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Time (years)"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Price"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -9041,7 +9096,7 @@ In my experiments:</p>
 </li>
 </ul>
 <hr/>
-<p>Thank you.</p>
+<p>2025 © Tonatiuh Matos Wiederhold</p>
 </div>
 </div>
 </div>
@@ -9057,5 +9112,40 @@ In my experiments:</p>
 </div>
 </div>
 </main>
+
+<style>
+  /* global font and color overrides */
+  body, main, div, p, li, td, th, code, pre {
+    color: #222 !important;        /* readable dark gray */
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #111 !important;
+  }
+
+  pre, code {
+    background-color: #f8f8f8 !important;
+    color: #111 !important;
+  }
+
+  /* make markdown cells more readable */
+  .jp-MarkdownCell, .text_cell_render {
+    line-height: 1.6;
+    color: #222 !important;
+  }
+
+  /* optional: lighten notebook background */
+  body {
+    background-color: #fff !important;
+  }
+
+  /* fix very dim text in dark exports */
+  .jp-RenderedHTMLCommon {
+    color: #222 !important;
+  }
+</style>
+
+
 </body>
 </html>
